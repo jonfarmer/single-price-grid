@@ -6,25 +6,195 @@
 
 
 /*1. Global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-
-
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Karla', sans-serif;
+    background-color: hsl(204, 43%, 93%);
+    
+}
 
 /*2. Elements */
+h2 {
+    font-weight: 700;
+}
 
+h3 {
+    font-weight: 400;
+}
 
+p {
+    font-size: 1rem;
+}
+
+ul {
+    margin-top: 1.25rem;
+}
+
+li {
+    text-decoration: none;
+    list-style-type: none;
+    line-height: 1.25rem;
+    opacity: .75;
+    font-size: 0.875rem;
+}
 
 
 /*3. Classes */
+.price-card {
+    display: flex;
+    height: 475px;
+    max-width: 675px;
+    flex-direction: column;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 0px;
+}
 
+.card-top {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 45%;
+    padding: 40px;
+    
+}
 
+.card-top h2 {
+    color: hsl(179, 62%, 43%);
+    margin-bottom: 20px;
+}
 
+.card-top h3 {
+    color: hsl(71, 73%, 54%);
+    margin-bottom: 15px;
+}   
 
+.card-top p {
+    line-height: 1.75rem;
+    opacity: .3;
+}
+
+.card-bottom {
+    display: flex;
+    width: 100%;
+    height: 55%;
+    color: white;
+}
+
+.card-bottom h3 {
+    font-weight: 700;
+}
+
+.subscription {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 50%;
+    padding: 40px;
+    background-color: hsl(179, 62%, 43%);
+
+}
+
+.subscription h3 {
+    margin-bottom: 20px;
+}
+
+.subscription p {
+    line-height: 2rem;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+}
+
+.price strong {
+    font-size: 32px;
+    padding-bottom: 5px;
+    margin-right: 10px;
+    
+}
+
+.per-month {
+    opacity: .5;
+}
+
+.why-us {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 50%;
+    padding: 40px;
+    background-color: rgba(42, 178, 175, .8);
+}
 
 /*4. Functional */
+button {
+    all: unset;
+    background-color: hsl(71, 73%, 54%);
+    color: white;
+    border-radius: 5px;
+    font-family: 'Karla', sans-serif;
+    font-weight: 700;
+    text-align: center;
+    line-height: 3;
+    margin: 30px 0px;
+    cursor: pointer;
+    box-shadow: 0px 10px 10px hsl(179, 40%, 43%);
+}
 
-
-
-
+button:active {
+    box-shadow: none;
+}
 
 /*5. Responsive */
+
+@media (max-width: 640px) and (min-width: 320px) {
+    .price-card {
+        width: 85vw;
+        height: auto;
+    }
+
+    .card-top {
+        height: 40%;
+        padding: 25px;
+    }
+
+    .call-to-action {
+        height: 100%;
+    }
+
+    .card-bottom {
+        flex-direction: column;
+        width: 100%;
+        height: 60%;
+    }
+
+    .subscription {
+        width: 100%;
+        height: 55%;
+        padding: 25px;
+    }
+
+    .why-us {
+        width: 100%;
+        height: 45%;
+        padding: 20px;
+    }
+
+    button {
+        margin-bottom: 10px;
+    }
+    
+}
